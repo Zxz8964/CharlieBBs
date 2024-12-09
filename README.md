@@ -95,14 +95,14 @@ Charlie BBS 是一个基于微服务架构的分布式论坛系统，提供完�
   
       # 修改各服务的application.yml，配置数据库连接等信息
   
-4. 启动服务
+4. 启动服务（待完成）
   
       cd charlie-bbs
       mvn clean install
       java -jar user-service/target/user-service.jar
   
 
-### 前端启动（待完成）
+### 前端启动
 
     cd frontend
     npm install
