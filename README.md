@@ -1,4 +1,4 @@
- # Charlie BBS - 分布式论坛系统
+ # Charlie BBS - 分布式论坛系统(开发中)
 
 ## 项目概述
 
