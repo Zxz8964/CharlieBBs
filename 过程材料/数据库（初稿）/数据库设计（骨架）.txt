@@ -1,0 +1,72 @@
+表信息与详细设计
+1. avatar_templates
+
+    用途: 存储头像模板的基本信息。
+    字段:
+        id: 唯一标识头像模板的ID。
+        name: 头像模板的名称（如“奶牛猫”、“三花猫”）。
+        description: 头像模板的描述。
+        image_data: 存储头像模板的图像数据（可能是像素数据或图片的Base64编码）。
+
+2. avatars
+
+    用途: 存储用户的个性化头像信息。
+    字段:
+        username: 用户名，作为主键并与 users 表关联。
+        first_avatar_url: 用户的初始头像URL。
+        next_avatar_url: 用户的后续头像URL。
+        signature: 用户的签名。
+        generated_pixel_avatar: 一个标志，表示是否生成了像素头像。
+        created_at: 记录创建时间。
+        updated_at: 记录更新时间。
+
+3. boards
+
+    用途: 存储论坛板块的结构和信息。
+    字段:
+        id: 唯一标识板块的ID。
+        name: 板块的名称。
+        description: 板块的描述。
+        parent_id: 父板块的ID，用于创建层级结构（外键关联到 boards 表的 id）。
+        created_at: 记录创建时间。
+        updated_at: 记录更新时间。
+
+4. post_tags
+
+    用途: 存储帖子与标签的多对多关系。
+    字段:
+        post_id: 帖子的ID（外键关联到 posts 表的 id）。
+        tag_id: 标签的ID（外键关联到 tags 表的 id）。
+
+5. posts
+
+    用途: 存储论坛帖子的信息。
+    字段:
+        id: 唯一标识帖子的ID。
+        user_id: 发帖用户的ID（外键关联到 users 表的 id）。
+        board_id: 帖子所属板块的ID（外键关联到 boards 表的 id）。
+        title: 帖子的标题。
+        content: 帖子的内容（可以是Markdown格式）。
+        created_at: 记录创建时间。
+        updated_at: 记录更新时间。
+
+6. tags
+
+    用途: 存储标签的信息。
+    字段:
+        id: 唯一标识标签的ID。
+        name: 标签的名称。
+        description: 标签的描述。
+
+7. users
+
+    用途: 存储用户的基本信息。
+    字段:
+        id: 唯一标识用户的ID。
+        username: 用户名。
+        email: 用户的邮箱地址。
+        password_hash: 用户密码的哈希值。
+        status: 用户的状态（如“active”、“inactive”等）。
+        avatar_url: 用户头像的URL。
+        created_at: 记录创建时间。
+        updated_at: 记录更新时间。
