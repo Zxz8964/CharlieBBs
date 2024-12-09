@@ -1,0 +1,389 @@
+/* 全局样式 */
+.logo {
+  margin-right: 20px;
+}
+
+.logoLink {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #409eff;
+  transition: all 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.logoLink:hover {
+  font-size: 25px; /* 鼠标悬停时增大字体 */
+  font-weight: bold;
+  color: #66b1ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* 全局字体 */
+  background-color: #f4f4f4; /* 页面背景色 */
+  line-height: 1.6; /* 增加行高以改善可读性 */
+}
+
+.app-container {
+  padding: 20px; /* 应用容器内边距 */
+  background-color: #f9f9f9; /* 背景颜色 */
+}
+
+.el-container {
+  min-height: 100vh; /* 设置最小高度 */
+}
+
+/* 卡片样式 */
+.el-card {
+  border-radius: 10px; /* 卡片圆角 */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* 更细腻的卡片阴影效果 */
+  background-color: #fff; /* 卡片背景颜色 */
+}
+
+/* 表单样式 */
+.el-form-item {
+  margin-bottom: 20px; /* 表单项之间的间距 */
+  border-radius: 5px; /* 表单项圆角 */
+  padding: 10px; /* 表单项内边距 */
+}
+
+.el-form-item label {
+  font-weight: bold; /* 加粗标签 */
+  color: #555; /* 标签颜色 */
+}
+
+/* 按钮样式 */
+.el-button {
+  margin-right: 10px; /* 按钮之间的间距 */
+  padding: 10px 15px; /* 按钮内边距 */
+  border: none; /* 去掉默认边框 */
+  border-radius: 5px; /* 按钮圆角 */
+  transition: background-color 0.3s, transform 0.2s; /* 背景色和缩放过渡效果 */
+}
+
+.el-button:hover {
+  background-color: #2d7f3b; /* 鼠标悬停时按钮背景颜色 */
+  color: #fff; /* 鼠标悬停时按钮字体颜色 */
+  transform: scale(1.05); /* 鼠标悬停时放大效果 */
+}
+
+.gender-save-container {
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+  gap: 20px; /* 控制性别选择和按钮之间的间距 */
+  margin-top: 10px; /* 增加顶部间距 */
+}
+
+/* 链接样式 */
+a {
+  color: #007bff; /* 链接颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  transition: color 0.3s; /* 颜色过渡效果 */
+}
+
+a:hover {
+  color: #0056b3; /* 鼠标悬停时链接颜色 */
+  text-decoration: underline; /* 鼠标悬停时下划线效果 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px; /* 在小屏幕上减少内边距 */
+  }
+  
+  .el-button {
+    margin-right: 5px; /* 减少按钮之间的间距 */
+    padding: 8px 12px; /* 调整按钮内边距 */
+  }
+}
+
+/* 主导航样式 */
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.header-actions {
+  transition: color 0.3s; /* 颜色过渡效果 */  
+  display: flex;
+  justify-content: flex-start; /* 水平左对齐 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 25px; /* 底部边距 */
+}
+.header-container {
+  display: flex;
+  justify-content: space-between; /* 在水平方向上分散对齐 */
+}
+
+/* 横向导航栏样式 */
+.el-menu-demo {
+
+  color: #fff; /* 白色文字 */
+  white-space: nowrap; /* 防止菜单项折叠 */
+  flex-grow: 1; /* 使导航栏占据可用空间 */
+  position: relative; /* 为了使头像绝对定位相对于这个容器 */
+}
+
+
+
+.el-menu-demo.el-menu-item.is-active,
+.el-menu-demo.el-sub-menu__title.is-active {
+  color: #ffd04b; /* 活跃项文字颜色 */
+}
+
+/* 头像样式 */
+.user-avatar {
+  position: absolute; /* 绝对定位 */
+  top: 5px; /* 调整头像距离导航栏的高度 */
+  right: 110px; /* 调整头像距离右侧的距离 */
+}
+
+/* Footer 样式 */
+.footer {
+  margin-top: auto; /* 在父容器中推到底部 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+
+
+.menu-container.is-collapse {
+  width: 64px; /* 折叠后的宽度 */
+}
+/* 面包屑样式 */
+.el-breadcrumb {
+  margin: 0;
+}
+
+/* 个人资料样式 */
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-info {
+  padding: 15px;
+}
+
+.avatar-container {
+  margin-bottom: 20px; /* 增加头像与信息的间距 */
+}
+
+.list-group {
+  list-style: none; /* 去掉默认的列表样式 */
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between; /* 使每个列表项的内容两侧对齐 */
+  align-items: center; /* 垂直居中 */
+  padding: 10px;
+  border: 1px solid #eee; /* 边框 */
+  border-radius: 4px; /* 圆角 */
+  margin-bottom: 10px; /* 列表项间距 */
+  background-color: #fff; /* 背景颜色 */
+  transition: background-color 0.3s; /* 背景色过渡效果 */
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0; /* 鼠标悬停时的背景色 */
+}
+
+/* 翻转样式 */
+.flip-container {
+  perspective: 1000px; /* 透视效果 */
+  position: relative;
+  width: 100%; /* 设置固定的宽度 */
+  height: 700px; /* 确保容器有固定高度，避免翻转时高度变化 */
+  overflow: hidden; /* 防止内容溢出容器 */
+}
+
+.flipper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flipped .front {
+  transform: rotateY(-180deg);
+}
+
+.flipped .back {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* 表单容器样式 */
+.form-container {
+  padding: 20px;
+  background-color: #fff; /* 背景颜色 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 角色管理 */
+.permission-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* 增加标签之间的间距 */
+}
+
+.button-new-tag {
+  margin-left: 8px;
+}
+
+/* 角色管理-rolemanager */
+.user-info {
+  margin-bottom: 20px; /* 角色选择区域与用户信息之间的间距 */
+  font-size: 18px; /* 用户信息的字体大小 */
+  font-weight: bold; /* 加粗用户信息 */
+  text-align: center; /* 居中显示 */
+}
+
+.color-blocks {
+  display: flex;
+  width: 100%; /* 设置宽度为100% */
+}
+
+.color-block {
+  flex: 1; /* 让每个色块平分容器宽度 */
+  height: 20px; /* 调整色块高度，变得更加迷你 */
+  margin: 0; /* 去掉间距以避免重叠 */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+.color-block.active {
+  background-color: #000; /* 选中的角色变成黑色背景 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 添加阴影效果来突出选中状态 */
+}
+
+.color-block.first {
+  border-top-left-radius: 5px; /* 左上角圆角 */
+  border-bottom-left-radius: 5px; /* 左下角圆角 */
+}
+
+.color-block.last {
+  border-top-right-radius: 5px; /* 右上角圆角 */
+  border-bottom-right-radius: 5px; /* 右下角圆角 */
+}
+
+.permission-switches {
+  display: flex;
+  flex-direction: column;
+}
+
+.permission-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.role-label {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+/* 表格 */
+.el-table{
+  width: 100%;
+  z-index: 1000;
+}
+/* 固定头部导航栏 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* 确保头部导航栏在最上层 */
+}
+
+
+/* 固定侧边导航栏 */
+.menu-container {
+  display: flex;
+  position: fixed;
+  top: 59px; /* 根据头部导航栏的高度调整 */
+  bottom: 0;
+  width: 200px; /* 默认宽度 */
+  transition: width 0.5s ease; /* 添加平滑过渡效果 */
+}
+
+.menu-container.is-collapse {
+  width: 64px; /* 折叠后的宽度 */
+}
+
+.menu-container.is-collapse + .main-content {
+  margin-left: 64px; /* 折叠后的宽度 */
+}
+/* 主内容区域样式 */
+.main-content {
+  margin-top: 85px; /* 根据头部导航栏的高度调整 */
+  overflow: auto; /* 允许内容溢出滚动 */
+}
+/*权限管理部分*/
+.expand-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expand-header {
+  margin-bottom: 10px;
+}
+
+.expand-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-tag {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.ml {
+  margin-left: 10px;
+}

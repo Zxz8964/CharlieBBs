@@ -1,0 +1,35 @@
+.home__body {
+    margin-top: 10vh;
+    display: grid;
+    height: auto;
+    justify-content: center;
+    grid-template-columns: 620px 320px;
+    gap: 25px;
+    background-color: #DAE0E6;
+}
+
+.home__body .body__left {
+    height: auto;
+}
+
+.home__body .body__right {
+    height: auto;
+}
+
+@media screen and (max-width:1000px) {
+    .home__body {
+        grid-template-columns: repeat(auto-fit, minmax(620px, 0.7fr));
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .home__body {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 0.7fr));
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home__body {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

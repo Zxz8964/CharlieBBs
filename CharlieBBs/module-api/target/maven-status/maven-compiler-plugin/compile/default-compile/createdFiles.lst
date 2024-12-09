@@ -1,0 +1,16 @@
+com\itvictorkile\api\WebConfig.class
+com\itvictorkile\api\BoardController.class
+com\itvictorkile\api\SearchController.class
+com\itvictorkile\api\UserController.class
+com\itvictorkile\api\UserRoleController.class
+com\itvictorkile\api\PostController.class
+com\itvictorkile\api\BoardUserController.class
+com\itvictorkile\api\PostTagController.class
+com\itvictorkile\api\RoleController.class
+com\itvictorkile\CharlieBBsApplication.class
+com\itvictorkile\api\PermissionController.class
+com\itvictorkile\api\CommentController.class
+com\itvictorkile\api\BoardTagController.class
+com\itvictorkile\api\NotificationController.class
+com\itvictorkile\api\RolePermissionController.class
+com\itvictorkile\api\TagController.class
